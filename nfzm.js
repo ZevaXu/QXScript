@@ -8,6 +8,8 @@ obj.isview = true;
 obj.isNewsStand = 2;
 obj.isdigg = true;
 obj.isfav = true;
+obj.isfree = 1;
+obj.isbuy = true;
 
 body = JSON.stringify(obj);
 $done({body});
