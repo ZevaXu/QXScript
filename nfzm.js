@@ -1,7 +1,7 @@
 var body = $response.body;
 var obj = JSON.parse(body);
 
-obj.menber_type = 5;
+obj.member_type = 5;
 obj.expire_time = "2030-05-05";
 obj.islogin = true;
 obj.isview = true;
