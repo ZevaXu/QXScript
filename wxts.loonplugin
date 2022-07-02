@@ -1,8 +1,8 @@
-#!name=微信听书APP()开启会员
+#!name=微信听书APP(V1.0.35)开启会员
 #!Url=https://github.com/ZevaXu/QXScript
 
 [Mitm]
 hostname = i.at.qq.com
 
 [Script]
-^https?:\/\/i\.at\.qq\.com\/(mine|pay\/memberinfo\?forceRefresh|timewallet) url script-response-body https://raw.githubusercontent.com/ZevaXu/QXScript/main/wxts.js
+http-response script-path=^https?:\/\/i\.at\.qq\.com\/(mine|pay\/memberinfo\?forceRefresh|timewallet) url script-response-body https://raw.githubusercontent.com/ZevaXu/QXScript/main/wxts.js,requires-body=true, timeout=10, tag=微信听书

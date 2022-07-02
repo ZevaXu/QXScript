@@ -1,11 +1,13 @@
-#!name=南方周末APP开启会员
+#!name=南方周末APP(V7.4.0)开启会员
 #!Url=https://github.com/ZevaXu/QXScript
 
 [Mitm]
 hostname = api.infzm.com
 
 [Script]
-^http:\/\/api\.infzm\.com\/mobile\/contens\/\d{0,10}\?user=+\d{0,15} url script-response-body https://raw.githubusercontent.com/ZevaXu/QXScript/main/nfzm.js
-^http:\/\/api\.infzm\.com\/mobile\/user\? url script-response-body https://raw.githubusercontent.com/ZevaXu/QXScript/main/nfzm.js
-^http:\/\/api\.infzm\.com\/mobile\/mail\/viplist url script-response-body https://raw.githubusercontent.com/ZevaXu/QXScript/main/nfzm.js
-^http:\/\/api\.infzm\.com\/mobile\/mail\/zone url script-response-body https://raw.githubusercontent.com/ZevaXu/QXScript/main/nfzm.js
+
+http-response ^http:\/\/api\.infzm\.com\/mobile\/contens\/\d{0,10}\?user=+\d{0,15} script-path=https://raw.githubusercontent.com/ZevaXu/QXScript/main/nfzm.js, requires-body=true, timeout=10, tag=南方周末
+
+http-response ^http:\/\/api\.infzm\.com\/mobile\/user\? script-path=https://raw.githubusercontent.com/ZevaXu/QXScript/main/nfzm.js,requires-body=true, timeout=10, tag=南方周末
+http-response ^http:\/\/api\.infzm\.com\/mobile\/mail\/viplist script-path=https://raw.githubusercontent.com/ZevaXu/QXScript/main/nfzm.js,requires-body=true, timeout=10, tag=南方周末
+http-response ^http:\/\/api\.infzm\.com\/mobile\/mail\/zone script-path=https://raw.githubusercontent.com/ZevaXu/QXScript/main/nfzm.js,requires-body=true, timeout=10, tag=南方周末
