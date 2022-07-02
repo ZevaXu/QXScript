@@ -5,4 +5,4 @@
 hostname = i.at.qq.com
 
 [Script]
-http-response script-path=^https?:\/\/i\.at\.qq\.com\/(mine|pay\/memberinfo\?forceRefresh|timewallet) url script-response-body https://raw.githubusercontent.com/ZevaXu/QXScript/main/wxts.js,requires-body=true, timeout=10, tag=微信听书
+http-response ^https?:\/\/i\.at\.qq\.com\/(mine|pay\/memberinfo\?forceRefresh|timewallet) script-path=https://raw.githubusercontent.com/ZevaXu/QXScript/main/wxts.js,requires-body=true, timeout=10, tag=微信听书
