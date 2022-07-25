@@ -1,0 +1,3 @@
+hostname = i.at.qq.com
+
+^https?:\/\/i\.at\.qq\.com\/(mine|pay\/memberinfo\?forceRefresh(.*)|timewallet(.*)) url script-response-body https://raw.githubusercontent.com/ZevaXu/QXScript/main/wxts.js
